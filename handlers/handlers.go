@@ -59,7 +59,7 @@ func DeleteFuncHandler(w http.ResponseWriter,  r *http.Request) {
 	key := vars["key"]
 
 	deleteFunc(key)
-	fmt.Fprintln(w, fmt.Sprintf("%v has been successfully deleted", key))
+	fmt.Fprintf(w, "%v has been successfully deleted", key)
 	w.WriteHeader(http.StatusOK)
 
 }
